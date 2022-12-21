@@ -1,0 +1,14 @@
+<!-- O modelo a seguir associa o valor de htmlSnippet. Uma vez interpolando-o no conteúdo de um elemento e uma vez vinculando-o à innerHTMLpropriedade de um elemento: -->
+
+<!--Exemplo de sanitização -->
+
+<h3>Binding innerHTML</h3>
+
+<p>Resultado do binding para interpolação:</p>
+
+<!--O conteúdo interpolado sempre tem escape — o HTML não é interpretado e o navegador exibe colchetes angulares no conteúdo de texto do elemento.-->
+<p class="valor-interpolado">{{ htmlSnippet }}</p>
+
+<p>Resultado do binding para innerHTML:</p>
+<!--Angular ver como inseguro e o limpa automaticamente-->
+<p class="valor-innerHtml" [innerHTML]="htmlSnippet"></p>
